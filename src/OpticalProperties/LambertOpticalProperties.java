@@ -13,6 +13,7 @@ public class LambertOpticalProperties implements IOpticalProperties
 
     public Color GetBrightness(Color illumination)
     {
-        return null;
+        float multiplier = (float)(1/Math.PI);
+        return diffusionCoef.Multiply(multiplier).Multiply(illumination);
     }
 }

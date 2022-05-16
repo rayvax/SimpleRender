@@ -10,4 +10,6 @@ public interface ILight
     //F/4pi - точечный
     //F/pi - ламбертовый
     Color GetIntensity(Vector3 direction);
+
+    Vector3 GetOrigin();
 }

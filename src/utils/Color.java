@@ -2,24 +2,36 @@ package utils;
 
 public class Color
 {
-    public float red;
-    public float green;
-    public float blue;
+    public float Red;
+    public float Green;
+    public float Blue;
+
+    public Color()
+    {
+        this(0, 0, 0);
+    }
 
     public Color(float r, float g, float b)
     {
-        red = r;
-        green = g;
-        blue = b;
+        Red = r;
+        Green = g;
+        Blue = b;
     }
 
     public Color Multiply(Color other)
     {
-        return new Color(red * other.red, green * other.green, blue * other.blue);
+        return new Color(Red * other.Red, Green * other.Green, Blue * other.Blue);
     }
 
     public Color Multiply(float multi)
     {
-        return new Color(multi * red, multi * green, multi * blue);
+        return new Color(multi * Red, multi * Green, multi * Blue);
+    }
+
+    public void SumSelf(Color other)
+    {
+        Red += other.Red;
+        Green += other.Green;
+        Blue += other.Blue;
     }
 }
